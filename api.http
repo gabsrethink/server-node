@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "New Event",
+    "details": "Evento para quem gosta de programação",
+    "maximumAttendees": 1
+}
+
+###
+POST http://localhost:3333/events/42e7054d-177d-4a45-b4ea-e7a9d0e29b31/attendees
+Content-Type: application/json
+
+{
+    "name": "Gabriel Melo",
+    "email": "gabriel2@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/42e7054d-177d-4a45-b4ea-e7a9d0e29b31
+
+
+###
+GET http://localhost:3333/attendees/2/badge
+
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+
+###
+GET http://localhost:3333/events/42e7054d-177d-4a45-b4ea-e7a9d0e29b31/attendees?query=roberto
